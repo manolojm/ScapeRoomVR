@@ -1,34 +1,28 @@
 using Oculus.Voice;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Voz : MonoBehaviour
-{
-    public GameObject cubo;
-
+public class Voz : MonoBehaviour {
     public AppVoiceExperience appVoiceExperience;
+    public Animator miPuerta;
 
     private void Start() {
-        
+
     }
 
     private void Update() {
         appVoiceExperience.Activate();
     }
 
-    public void UpdateColor(string[] values) {
-        var colorString = values[0];
-        var formaString = values[0];
-        var colortmp = Color.blue;
+    public void AbrirPuerta(string[] values) {
+        var abrirstring = values[0];
+        var puertastring = values[1];
 
-        if(colorString == "rojo") {
-            colortmp = Color.red;
-        }
-
-        Debug.Log("color: " + colorString);
-
-        cubo.GetComponent<Renderer>().material.color = colortmp;
+        if (abrirstring == "abrir" || abrirstring == "puerta" || puertastring == "abrir" || puertastring == "puerta") {
+            miPuerta.Play("PuertaAbrir");
+        } 
     }
 }

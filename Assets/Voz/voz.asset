@@ -20,15 +20,17 @@ MonoBehaviour:
     isPrivate: 1
     createdAt: 2023-05-16T23:34:36-0700
     trainingStatus: 1
-    lastTrainDuration: 37
-    lastTrainedAt: 2023-05-25T23:57:08-0700
-    nextTrainAt: 2023-05-25T23:56:31-0700
+    lastTrainDuration: 49
+    lastTrainedAt: 2023-05-28T16:40:16-0700
+    nextTrainAt: 2023-05-28T16:39:27-0700
     intents:
     - id: 594341772486372
       name: abrir_puerta
       entities:
-      - name: puerta:puerta
-        id: 186653893963749
+      - name: accion:accion
+        id: 995434908120199
+      - name: objeto:objeto
+        id: 589036109989103
     - id: 618366160245324
       name: cambiar_color
       entities:
@@ -37,6 +39,18 @@ MonoBehaviour:
       - name: forma:forma
         id: 1695345047590536
     entities:
+    - name: accion
+      id: 762051945406780
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: accion
+        id: 995434908120199
+      keywords:
+      - keyword: abrir
+        synonyms:
+        - abrir
     - name: color
       id: 1192423228085291
       lookups:
@@ -66,18 +80,18 @@ MonoBehaviour:
       - keyword: cubo
         synonyms:
         - cubo
-    - name: puerta
-      id: 5897762726999137
+    - name: objeto
+      id: 3450207075253480
       lookups:
       - free-text
       - keywords
       roles:
-      - name: puerta
-        id: 186653893963749
+      - name: objeto
+        id: 589036109989103
       keywords:
-      - keyword: "\xC1brete"
+      - keyword: puerta
         synonyms:
-        - "\xC1brete"
+        - puerta
     traits: []
     voices:
     - name: Cael
